@@ -23,7 +23,7 @@ public class Window extends JFrame{ //Herencia entre clases, Window hereda de JF
     for(int i=0;i<10;i++){
 
     crearPuntos();
-    System.out.println(puntoA.getPositionX());
+    //System.out.println(puntoA.getPositionX());
   }
 
 
