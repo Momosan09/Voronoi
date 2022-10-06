@@ -6,6 +6,7 @@ import java.awt.Color;
 public class Window extends JFrame{ //Herencia entre clases, Window hereda de JFrame
   JPanel panel = new JPanel();
   private int sizeX=600, sizeY=600;
+  dott puntoA = new dott();
 
   public Window(){
     setSize(sizeX,sizeY);//x, y
@@ -19,8 +20,11 @@ public class Window extends JFrame{ //Herencia entre clases, Window hereda de JF
 
   private void iniciarComponentes(){
     ponerPanel();
-    //crearEtiqueta(puntoA.getPositionX(),20);
+    for(int i=0;i<10;i++){
+
     crearPuntos();
+    System.out.println(puntoA.getPositionX());
+  }
 
 
   }
@@ -41,7 +45,6 @@ public class Window extends JFrame{ //Herencia entre clases, Window hereda de JF
   }
 
 public void crearPuntos(){
-  dott puntoA = new dott();
   puntoA.setRandomPosition(getWindowSizeX(), getWindowSizeY());
   crearEtiqueta(puntoA.getPositionX(),puntoA.getPositionY());
   System.out.println("Position X = " + puntoA.getPositionX() + "\n Position Y = " + puntoA.getPositionY());
@@ -49,8 +52,8 @@ public void crearPuntos(){
 
   public void crearEtiqueta(int setPositionX, int setPositionY){
     JLabel punto = new JLabel();
-    punto.setText("Hola Lemon");
-    punto.setBounds(setPositionX, setPositionY, 20,20);
+    punto.setText("•");
+    punto.setBounds(setPositionX, setPositionY, 10,10);
     panel.add(punto);
   }
 

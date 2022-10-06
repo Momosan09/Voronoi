@@ -5,6 +5,7 @@ public class dott{
   private int positionX;
   private int positionY;
   private String color;
+  private String nombre;
   //visibles
 
   Random rand = new Random();
@@ -23,6 +24,9 @@ public class dott{
     positionY = rand.nextInt(windowYSize);
     //Window.etiqueta();
   }
+  public void setNombre(String setNombre){
+    nombre = setNombre;
+  }
   public int getPositionX(){
     return positionX;
   }
@@ -32,7 +36,8 @@ public class dott{
   public String getColor(){
     return color;
   }
-
-
+  public String getNombre(){
+    return nombre;
+  }
 
 }
